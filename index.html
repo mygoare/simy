@@ -1,47 +1,49 @@
+<?php
+/*
+Template Name:simy
+Description:simple
+Version:0.1
+Author:mygoare
+Author Url:http://www.mygoare.com
+ForEmlog:4.1.0
+*/
+if(!defined('EMLOG_ROOT')) {exit('error!');}
+require_once View::getView('module');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<link media="all" rel="stylesheet" href="simy.css" type="text/css" />
-	<title>未来记忆</title>
+	<meta name="keywords" content="<?php echo $site_key; ?>" />
+	<meta name="description" content="<?php echo $description; ?>" />
+
+	<link media="all" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>simy.css" type="text/css" />
+	<title><?php echo $blogtitle; ?></title>
+<?php doAction('index_head'); ?>
 </head>
 <body>
 	<div id="header">
 		<div id="headerbar"></div>
 		<div id="head">
-			<h1><a href="">未来记忆</a></h1>
-			<h3>—— 记录生活的所见所闻所学所想</h3>
+			<h1><a href="<?php echo BLOG_URL; ?>"><?php echo $blogname; ?></a></h1>
+			<h3><?php echo $bloginfo; ?></h3>
 		</div>
 	</div>
 	<div id="wrap">
 		<div id="content">
 			<div id="contentleft">
+<?php doAction('index_loglist_top'); ?>
+<?php foreach($logs as $value): ?>
 				<div class="essay">
-					<h2><a href="">清理浮动！！</a></h2>
-					<span class="datetime">Posttime : 2012-1-5 Aauthor : <a href="">mygoare</a> cat : <a href="">blog</a></span>
-					<p>我想，做过网页的同学应该都听过这个名词。在网页制作中，浮动是个好东西啊。但是由于浮动还来的BUG也非常之后。浮动有时候会带来很多诡异的意想不到的各种各样的表现。简单的IE6双边距BUG就是浮动一手制造的。</p>
-					<p>在什么情况下要记得清理浮动呢？我以前也看过一些别人写的文章，大都是介绍如何清理浮动。但终不太明白何时要清理浮动，何时会出来那种要清理浮动的情况。
-纸上得来终觉渐，觉知此事要躬行。只有当自己真正遇到了，才知道是怎么一回事。
-简单来说，我的理解：清理浮动就是当外层标签没有浮动而内层标签却浮动的情况下，要为内层标签清除浮动。否则会外层标签的一些样式则显现不出来。</p>
+					<h2><?php topflg($value['top']); ?><a href="<?php echo $value['log_url']; ?>"><?php echo $value['log_title']; ?></a></h2>
+					<span class="datetime">Posttime : <?php echo gmdate('Y-n-j G:i l', $value['date']); ?> Aauthor : <?php blog_author($value['author']); ?> cat : <a href="">blog</a>
+					<?php blog_sort($value['logid']); ?> 
+					<?php editflg($value['logid'],$value['author']); ?>
+					</span>
+	<?php echo $value['log_description']; ?>
 				</div>
-				<div class="essay">
-					<h2><a href="">清理浮动！！</a></h2>
-					<span class="datetime">Posttime : 2012-1-5 Aauthor : <a href="">mygoare</a> cat : <a href="">blog</a></span>
-					<p>我想，做过网页的同学应该都听过这个名词。在网页制作中，浮动是个好东西啊。但是由于浮动还来的BUG也非常之后。浮动有时候会带来很多诡异的意想不到的各种各样的表现。简单的IE6双边距BUG就是浮动一手制造的。</p>
-					<p>在什么情况下要记得清理浮动呢？我以前也看过一些别人写的文章，大都是介绍如何清理浮动。但终不太明白何时要清理浮动，何时会出来那种要清理浮动的情况。
-纸上得来终觉渐，觉知此事要躬行。只有当自己真正遇到了，才知道是怎么一回事。
-简单来说，我的理解：清理浮动就是当外层标签没有浮动而内层标签却浮动的情况下，要为内层标签清除浮动。否则会外层标签的一些样式则显现不出来。</p>
-				</div>
-				<div class="essay">
-					<h2><a href="">清理浮动！！</a></h2>
-					<span class="datetime">Posttime : 2012-1-5 Aauthor : <a href="">mygoare</a> cat : <a href="">blog</a></span>
-					<p>我想，做过网页的同学应该都听过这个名词。在网页制作中，浮动是个好东西啊。但是由于浮动还来的BUG也非常之后。浮动有时候会带来很多诡异的意想不到的各种各样的表现。简单的IE6双边距BUG就是浮动一手制造的。</p>
-					<p>在什么情况下要记得清理浮动呢？我以前也看过一些别人写的文章，大都是介绍如何清理浮动。但终不太明白何时要清理浮动，何时会出来那种要清理浮动的情况。
-纸上得来终觉渐，觉知此事要躬行。只有当自己真正遇到了，才知道是怎么一回事。
-简单来说，我的理解：清理浮动就是当外层标签没有浮动而内层标签却浮动的情况下，要为内层标签清除浮动。否则会外层标签的一些样式则显现不出来。</p>
-				</div>
-	
-			</div>
+<?php endforeach; ?>
+		</div>
 			<!--
 			<div id="sidebar">
 				<ul>
@@ -67,6 +69,9 @@
 			-->
 		</div>
 		<div class="clear"></div>
+<?php
+if(!defined('EMLOG_ROOT')) {exit('error!');} 
+?>
 		<div id="footer">
 			<p id="copy">&copy; 2012 All rights resverd. Powered by mygoare</p>
 			<p>
@@ -74,6 +79,7 @@
 				<a href="">Works</a>
 				<a href="">Contact</a>
 			</p>
+<?php doAction('index_footer'); ?>
 		</div>
 	</div>
 </body>
