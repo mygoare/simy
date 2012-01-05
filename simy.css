@@ -14,7 +14,7 @@ html {font-family:"Microsoft YaHei"}
 #headerbar {width:100%; height:3px; background:#222;}
 
 #wrap { padding-left:10px; padding-right:10px; border-top:1px solid #ccc; overflow:auto; min-width:500px;} 
-#contentleft {margin-top:30px; float:left; display:inline; z-index:100;}
+#contentleft {margin-top:30px; display:block; }
 .essay {border-left:2px solid #eee; padding-left:5px; padding-top:10px; padding-bottom:10px; margin-bottom:20px;}
 .essay:hover {border-left:2px solid #ccc; background-color:#f7f7f7;}
 .essay h2 {font-size:20px;}
@@ -32,5 +32,5 @@ html {font-family:"Microsoft YaHei"}
 .clear {clear:both;}
 
 #content {}
-#sidebar {position:fixed; top:30%; right:10%; opacity:0.2; background:#fff; z-index:1;}
+#sidebar {position:fixed; top:30%; right:10%; opacity:0.2; background:#fff; }
 #sidebar:hover {opacity:1;}
