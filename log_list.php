@@ -8,14 +8,12 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 <?php foreach($logs as $value): ?>
 				<div class="essay">
 					<h2><?php topflg($value['top']); ?><a href="<?php echo $value['log_url']; ?>"><?php echo $value['log_title']; ?></a></h2>
-					<span class="datetime">Posttime : <?php echo gmdate('Y-n-j G:i l', $value['date']); ?> Aauthor : <?php blog_author($value['author']); ?> cat : <a href="">blog</a>
-					<?php blog_sort($value['logid']); ?> 
-					<?php editflg($value['logid'],$value['author']); ?>
+					<span class="datetime">Posttime : <?php echo gmdate('Y-n-j G:i l', $value['date']); ?> | Aauthor : <?php blog_author($value['author']); ?> | <?php blog_sort($value['logid']); ?> <?php editflg($value['logid'],$value['author']); ?>
 					</span>
 	<?php echo $value['log_description']; ?>
 				</div>
 <?php endforeach; ?>
-		</div>
+			</div>
 			<!--
 			<div id="sidebar">
 				<ul>
@@ -39,7 +37,8 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 				</ul>
 			</div>
 			-->
-		</div>
+		<div id="pagenavi"><?php echo $page_url;?></div>
+		</div><!--end #content-->
 		<div class="clear"></div>
 <?php
 // include View::getView('side');
