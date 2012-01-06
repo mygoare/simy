@@ -6,7 +6,7 @@
 html {color: #333;background: #FFF;}body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {margin: 0;padding: 0;}table {border-collapse: collapse;border-spacing: 0;}fieldset, img {border: 0;}address, caption, cite, code, dfn, em, th, var, optgroup {font-style: inherit;font-weight: inherit;}del, ins {text-decoration: none;}li {list-style: none;}caption, th {text-align: left;}h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}q:before, q:after {content: "";}abbr, acronym {border: 0;font-variant: normal;}sup {vertical-align: baseline;}sub {vertical-align: baseline;}legend {color: #000;}input, button, textarea, select, optgroup, option {font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;outline: none;}input, button, textarea, select {*font-size: 100%;}
 
 html {font-family:"Microsoft YaHei"}
-#header {width:100%; height:100px; background:#eee url(dragon_bg.jpg) no-repeat scroll 100% 60%}
+#header {width:100%; height:100px; background:#eee url(dragon_bg.jpg) no-repeat scroll 5% 60%}
 #head {position:relative; margin-left:18px; top:30%; }
 #head h1 {font-size:28px; text-shadow:#fff 1px 1px;}
 #head h1 a {color:#222; text-decoration:none;}
@@ -18,9 +18,9 @@ html {font-family:"Microsoft YaHei"}
 .essay {border-left:2px solid #eee; padding-left:5px; padding-top:10px; padding-bottom:10px; margin-bottom:20px;}
 .essay:hover {border-left:2px solid #ccc; background-color:#f7f7f7;}
 .essay h2 {font-size:20px;}
-.essay h2 a {color:#000; text-decoration:none; padding:5px; display:block; margin-right:5px;color:#fff; background-color:#000;}
-/*.essay h2 a:hover {color:#fff; background-color:#000;}*/
-.essay p {font-size:14px; line-height:25px; padding-left:5px; text-shadow:#ccc 1px 1px;}
+.essay h2 a { text-decoration:none; padding:5px; display:block; margin-right:5px;color:#eee; background-color:#000; border-radius:3px;}
+.essay h2 a:hover {color:#fff; background-color:#000;}
+.essay p {font-size:14px; line-height:25px; padding-left:5px; text-shadow:#ccc 1px 1px; margin:5px auto;}
 .essay p img {padding:2px; border:1px solid #ccc; margin:5px auto;}
 .essay span.datetime {font-size:12px; color:#777; display:block; margin:5px auto; padding-left:5px;}
 .datetime a {color:#ccc;}

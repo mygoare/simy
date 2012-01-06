@@ -37,6 +37,6 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 		</div>
 		<div class="clear"></div>
 <?php
- include View::getView('side');
+// include View::getView('side');
  include View::getView('footer');
 ?>
