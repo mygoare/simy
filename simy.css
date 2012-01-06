@@ -8,9 +8,9 @@ html {color: #333;background: #FFF;}body, div, dl, dt, dd, ul, ol, li, h1, h2, h
 html {font-family:"Microsoft YaHei"}
 #header {width:100%; height:100px; background:#eee;}
 #head {position:relative; margin-left:18px; top:30%;}
-#head h1 {font-size:28px;}
+#head h1 {font-size:28px; text-shadow:#fff 1px 1px;}
 #head h1 a {color:#222; text-decoration:none;}
-#head h3 {font-size:14px; margin-left:120px;}
+#head h3 {font-size:14px; margin-left:120px;text-shadow:#fff 1px 1px;}
 #headerbar {width:100%; height:3px; background:#222;}
 
 #wrap { padding-left:10px; padding-right:10px; border-top:1px solid #ccc; overflow:auto; min-width:500px;} 
@@ -18,9 +18,9 @@ html {font-family:"Microsoft YaHei"}
 .essay {border-left:2px solid #eee; padding-left:5px; padding-top:10px; padding-bottom:10px; margin-bottom:20px;}
 .essay:hover {border-left:2px solid #ccc; background-color:#f7f7f7;}
 .essay h2 {font-size:20px;}
-.essay h2 a {color:#000; text-decoration:none; padding:5px; display:block; margin-right:5px;}
-.essay h2 a:hover {color:#fff; background-color:#000;}
-.essay p {font-size:14px; line-height:25px; padding-left:5px;}
+.essay h2 a {color:#000; text-decoration:none; padding:5px; display:block; margin-right:5px;color:#fff; background-color:#000;}
+/*.essay h2 a:hover {color:#fff; background-color:#000;}*/
+.essay p {font-size:14px; line-height:25px; padding-left:5px; text-shadow:#ccc 1px 1px;}
 .essay span.datetime {font-size:12px; color:#777; display:block; margin:5px auto; padding-left:5px;}
 .datetime a {color:#ccc;}
 .datetime a:hover {color:#777;}
