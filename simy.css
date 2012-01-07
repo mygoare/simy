@@ -6,14 +6,14 @@
 html {color: #333;background: #FFF;}body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {margin: 0;padding: 0;}table {border-collapse: collapse;border-spacing: 0;}fieldset, img {border: 0;}address, caption, cite, code, dfn, em, th, var, optgroup {font-style: inherit;font-weight: inherit;}del, ins {text-decoration: none;}li {list-style: none;}caption, th {text-align: left;}h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}q:before, q:after {content: "";}abbr, acronym {border: 0;font-variant: normal;}sup {vertical-align: baseline;}sub {vertical-align: baseline;}legend {color: #000;}input, button, textarea, select, optgroup, option {font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;outline: none;}input, button, textarea, select {*font-size: 100%;}
 
 html {font-family:"Microsoft YaHei"}
-#header {width:100%; height:100px; background:#eee url(dragon_bg.jpg) no-repeat scroll 5% 60%}
+#header {width:100%; height:100px; background:#eee url(dragon_bg.jpg) no-repeat scroll 5% 60%;border-bottom:1px solid #ccc;}
 #head {position:relative; margin-left:18px; top:30%; }
 #head h1 {font-size:28px; text-shadow:#fff 1px 1px;}
 #head h1 a {color:#222; text-decoration:none;}
 #head h3 {font-size:14px; margin-left:120px;text-shadow:#fff 1px 1px;}
 #headerbar {width:100%; height:3px; background:#222;}
 
-#wrap { padding-left:10px; padding-right:10px; border-top:1px solid #ccc; overflow:auto; min-width:500px;} 
+#wrap { padding-left:10px; padding-right:10px;  overflow:auto; min-width:500px;} 
 #contentleft {margin-top:30px; display:block; }
 .essay {border-left:2px solid #eee; padding-left:5px; padding-top:10px; padding-bottom:10px; margin-bottom:20px;}
 .essay:hover {border-left:2px solid #ccc; background-color:#f7f7f7;}
@@ -31,9 +31,12 @@ html {font-family:"Microsoft YaHei"}
 #page a { padding:5px 10px; color:#222; text-decoration:none; background-color:#eee;}
 #page a:hover {background-color:#000; color:#fff;}
 
-#footer {margin-top:50px; }
-#footer p {float:right; font-size:12px; margin-bottom:10px;}
+#footer {margin-top:50px; height:30px; padding-left:10px; padding-right:10px;}
+#footer p {float:right; font-size:12px; margin-bottom:10px; line-height:30px;}
 #footer #copy {float:left;}
+/* sticky footer */
+/*margin-top 与 border-top的数值等于header与footer的相加和，因为footer有margin-top 50,所以最后为101+50+50=201*/
+body {display:block;} html,body {height:100%;} #wrap {min-height:100%; margin-top:-181px;} #content {border-top:181px solid #ccc;} #header,#footer {position:relative;}
 
 .clear {clear:both;}
 

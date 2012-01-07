@@ -1,3 +1,4 @@
+	</div>
 <?php
 if(!defined('EMLOG_ROOT')) {exit('error!');} 
 ?>
@@ -10,6 +11,5 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 			</p>
 <?php doAction('index_footer'); ?>
 		</div>
-	</div>
 </body>
 </html>
