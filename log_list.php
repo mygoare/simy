@@ -37,7 +37,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 				</ul>
 			</div>
 			-->
-		<div id="pagenavi"><?php echo $page_url;?></div>
+		<div id="page"><?php echo $page_url;?></div>
 		</div><!--end #content-->
 		<div class="clear"></div>
 <?php
