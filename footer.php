@@ -8,6 +8,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 				<a href="">About</a>
 				<a href="">Works</a>
 				<a href="">Contact</a>
+				<a href="">friend</a>
 			</p>
 <?php doAction('index_footer'); ?>
 		</div>
