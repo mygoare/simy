@@ -10,32 +10,10 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 					</span>
 	<?php echo $log_content; ?>
 				</div>
+			</div>
+<div id="sidebar">
 	<?php doAction('log_related', $logData); ?>
-			</div>
-			<!--
-			<div id="sidebar">
-				<ul>
-					<li>
-						<h3>分类归档</h3>
-						<ul>
-							<li>
-								<a href="">前端技术</a>
-							</li>
-							<li>
-								<a href="">平日杂记</a>
-							</li>
-							<li>
-								<a href="">电脑相关</a>
-							</li>
-							<li>
-								<a href="">博客之路</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			-->
-		</div>
+</div>
 		<div class="clear"></div>
 <?php
 // include View::getView('side');

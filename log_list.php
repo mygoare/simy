@@ -14,29 +14,35 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 				</div>
 <?php endforeach; ?>
 			</div>
-			<!--
 			<div id="sidebar">
 				<ul>
-					<li>
-						<h3>分类归档</h3>
-						<ul>
-							<li>
-								<a href="">前端技术</a>
-							</li>
-							<li>
-								<a href="">平日杂记</a>
-							</li>
-							<li>
-								<a href="">电脑相关</a>
-							</li>
-							<li>
-								<a href="">博客之路</a>
-							</li>
-						</ul>
-					</li>
+<?php 
+$widgets = !empty($options_cache['widgets1']) ? unserialize($options_cache['widgets1']) : array();
+doAction('diff_side');
+foreach ($widgets as $val)
+{
+	$widget_title = @unserialize($options_cache['widget_title']);
+	$custom_widget = @unserialize($options_cache['custom_widget']);
+	if(strpos($val, 'custom_wg_') === 0)
+	{
+		$callback = 'widget_custom_text';
+		if(function_exists($callback))
+		{
+			call_user_func($callback, htmlspecialchars($custom_widget[$val]['title']), $custom_widget[$val]['content']);
+		}
+	}else{
+		$callback = 'widget_'.$val;
+		if(function_exists($callback))
+		{
+			preg_match("/^.*\s\((.*)\)/", $widget_title[$val], $matchs);
+			$wgTitle = isset($matchs[1]) ? $matchs[1] : $widget_title[$val];
+			call_user_func($callback, htmlspecialchars($wgTitle));
+		}
+	}
+}
+?>
 				</ul>
 			</div>
-			-->
 		<div id="page"><?php echo $page_url;?></div>
 		</div><!--end #content-->
 		<div class="clear"></div>
