@@ -11,9 +11,6 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 	<?php echo $log_content; ?>
 				</div>
 			</div>
-			<div id="sidebar">
-				<?php doAction('log_related', $logData); ?>
-			</div>
 		</div>
 		<div class="clear"></div>
 <?php
