@@ -10,7 +10,8 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 					</span>
 	<?php echo $log_content; ?>
 				</div>
-		</div>
+	<?php doAction('log_related', $logData); ?>
+			</div>
 			<!--
 			<div id="sidebar">
 				<ul>
