@@ -36,7 +36,7 @@ html {font-family:"Microsoft YaHei"}
 #footer #copy {float:left;}
 /* sticky footer */
 /*margin-top 与 border-top的数值等于header与footer的相加和，因为footer有margin-top 50,所以最后为101+50+50=201*/
-body {display:block;} html,body {height:100%;} #wrap {min-height:100%; margin-top:-181px;} #content {border-top:181px solid #ccc;} #header,#footer {position:relative;}
+body {display:block;} html,body {height:100%;} #wrap {min-height:100%; margin-top:-181px;} #content {border-top:181px solid #eee;} #header,#footer {position:relative;}
 
 .clear {clear:both;}
 
