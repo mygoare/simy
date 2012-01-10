@@ -18,8 +18,8 @@ require_once View::getView('module');
 	<meta name="description" content="<?php echo $description; ?>" />
 
 	<!--javascript code prettifier-->
-	<link media="all" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>js/prettifier.css" type="text/css" />
-	<script type="text/javascript" src="<?php echo TEMPLATE_URL; ?>js/prettifier.js"></script>
+	<link media="all" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>js/prettify.css" type="text/css" />
+	<script type="text/javascript" src="<?php echo TEMPLATE_URL; ?>js/prettify.js"></script>
 	<!--end-->
 	<link media="all" rel="stylesheet" href="<?php echo TEMPLATE_URL; ?>simy.css" type="text/css" />
 	<title><?php echo $blogtitle; ?></title>
