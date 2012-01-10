@@ -16,6 +16,10 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 			</div>
 			<div id="sidebar">
 				<ul>
+<li>
+<p>My Tags:</p>
+<p>Mac , Vim , Github</p>
+</li>
 <?php 
 $widgets = !empty($options_cache['widgets1']) ? unserialize($options_cache['widgets1']) : array();
 doAction('diff_side');
