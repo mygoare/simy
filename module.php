@@ -255,11 +255,11 @@ function blog_author($uid){
 function neighbor_log($neighborLog){
 	extract($neighborLog);?>
 	<?php if($prevLog):?>
-	<a id="preLog" href="<?php echo Url::log($prevLog['gid']) ?>"><?php echo "&laquo; ".$prevLog['title'];?></a>
+	<a id="preLog" href="<?php echo Url::log($prevLog['gid']) ?>" title="<?php echo $prevLog['title'];?>"><?php echo "&laquo; ".$prevLog['title'];?></a>
 	<?php endif;?>
-	<a id="logIndex" href="http://www.mygoare.com"></a>
+	<a id="logIndex" href="http://www.mygoare.com" title="返回首页"></a>
 	<?php if($nextLog):?>
-		 <a id="nextLog" href="<?php echo Url::log($nextLog['gid']) ?>"><?php echo $nextLog['title']." &raquo;";?></a>
+		 <a id="nextLog" href="<?php echo Url::log($nextLog['gid']) ?>" title="<?php echo $nextLog['title'];?>"><?php echo $nextLog['title']." &raquo;";?></a>
 	<?php endif;?>
 <?php }?>
 <?php
