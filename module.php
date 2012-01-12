@@ -257,6 +257,7 @@ function neighbor_log($neighborLog){
 	<?php if($prevLog):?>
 	<a id="preLog" href="<?php echo Url::log($prevLog['gid']) ?>"><?php echo "&laquo; ".$prevLog['title'];?></a>
 	<?php endif;?>
+	<a id="logIndex" href="http://www.mygoare.com"></a>
 	<?php if($nextLog):?>
 		 <a id="nextLog" href="<?php echo Url::log($nextLog['gid']) ?>"><?php echo $nextLog['title']." &raquo;";?></a>
 	<?php endif;?>
