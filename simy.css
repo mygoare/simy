@@ -55,3 +55,6 @@ body {display:block;} html,body {height:100%;} #wrap {min-height:100%; margin-to
 #nextLog {padding:5px; width:40%; position:absolute; right:0%; text-align:center; display:block;}
 #logIndex {width:50px;height:35px; margin:auto; position:absolute; left:50%; margin-left:-25px;}
 #logIndex:hover {background:#333 url(home.png) no-repeat scroll 0px -35px;}
+
+#comment-place {display:block; clear:both; background-color:#f7f7f7; margin-top:10px; border-top:1px solid #eee; border-bottom:1px solid #eee; padding-top:5px; padding-left:7px;}
+#comment-post p input ,#comment-post p textarea {margin:5px auto;}
