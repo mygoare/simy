@@ -255,13 +255,10 @@ function blog_author($uid){
 function neighbor_log($neighborLog){
 	extract($neighborLog);?>
 	<?php if($prevLog):?>
-	&laquo; <a href="<?php echo Url::log($prevLog['gid']) ?>"><?php echo $prevLog['title'];?></a>
-	<?php endif;?>
-	<?php if($nextLog && $prevLog):?>
-		|
+	<a id="preLog" href="<?php echo Url::log($prevLog['gid']) ?>"><?php echo "&laquo; ".$prevLog['title'];?></a>
 	<?php endif;?>
 	<?php if($nextLog):?>
-		 <a href="<?php echo Url::log($nextLog['gid']) ?>"><?php echo $nextLog['title'];?></a>&raquo;
+		 <a id="nextLog" href="<?php echo Url::log($nextLog['gid']) ?>"><?php echo $nextLog['title']." &raquo;";?></a>
 	<?php endif;?>
 <?php }?>
 <?php

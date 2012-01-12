@@ -15,7 +15,7 @@ html {font-family:"Microsoft YaHei"}
 
 #wrap { padding-left:10px; padding-right:10px;  overflow:hidden; min-width:600px;} /*overflow:hidden为消除浮动，原为auto,因ff出现滚动条兼容问题更改 overflow:hidden也可以防止窗口变小图片溢出， min-width:600是为了保持在窗口缩小情况下底部不换行重叠的最小宽度*/
 #contentleft {margin-top:30px; display:block;}
-.essay {border-left:2px solid #eee; padding-left:5px; padding-top:10px; padding-bottom:10px; margin-bottom:20px; overflow:hidden; padding-right:5px;}
+.essay {border-left:2px solid #eee; padding-left:5px; padding-top:10px; padding-bottom:10px; margin-bottom:10px; overflow:hidden; padding-right:5px;}
 .essay:hover {border-left:2px solid #ccc; background-color:#f7f7f7;}
 .essay h2 {font-size:20px; display:block; width:100%;}
 .essay h2 a { text-decoration:none; padding:5px; display:block; color:#eee; background-color:#000; border-radius:3px;}
@@ -47,3 +47,10 @@ body {display:block;} html,body {height:100%;} #wrap {min-height:100%; margin-to
 #sidebar h3 {font-weight:bold;}
 #blogsort li a {font-size:14px; color:#333;}
 #blogsort li a:hover {color:#fff; background-color:#000;}
+
+.nextlog {position:relative; width:100%; height:35px; border:1px solid #ccc; margin-bottom:10px; background:#333 url(home.png) no-repeat scroll top center;}
+.nextlog a {line-height:25px; color:#eee; text-decoration:none;}
+.nextlog a:hover {background-color:#fff; color:#000;}
+#preLog {padding:5px; width:30%; position:absolute; left:0%; text-align:center;}
+#nextLog {padding:5px; width:30%; position:absolute; right:0%; text-align:center;}
+#logIndex {padding:5px; width:30%; position:absolute; left:50%; text-align:center;}

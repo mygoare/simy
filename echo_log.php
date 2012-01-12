@@ -10,7 +10,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 					</span>
 	<?php echo $log_content; ?>
 				</div>
-
+	<div class="nextlog"><?php neighbor_log($neighborLog); ?></div>
 <!-- JiaThis Button BEGIN -->
 <div id="jiathis_style_32x32">
 <a class="jiathis_button_qzone"></a>
