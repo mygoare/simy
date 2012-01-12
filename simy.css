@@ -20,7 +20,7 @@ html {font-family:"Microsoft YaHei"}
 .essay h2 {font-size:20px; display:block; width:100%;}
 .essay h2 a { text-decoration:none; padding:5px; display:block; color:#eee; background-color:#000; border-radius:3px;}
 .essay h2 a:hover {color:#fff; background-color:#000;}
-.essay p {font-size:14px; line-height:25px; padding-left:5px; text-shadow:#ccc 1px 1px; margin:5px auto; padding-right:5px;}
+.essay p {font-size:14px; line-height:24px; padding-left:5px; text-shadow:#ccc 1px 1px; margin:10px auto; padding-right:5px;}
 .essay p img {padding:2px; border:1px solid #ccc; margin:5px auto;}
 .essay span.datetime {font-size:12px; color:#777; display:block; margin:5px auto; padding-left:5px; padding-right:5px;}
 .datetime a {color:#ccc;}
