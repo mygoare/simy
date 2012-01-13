@@ -334,24 +334,17 @@ function blog_comments_post($logid,$ckname,$ckmail,$ckurl,$verifyCode,$allow_rem
 	<div id="comment-place">
 	<div class="comment-post" id="comment-post">
 		<div class="cancel-reply" id="cancel-reply" style="display:none"><a href="javascript:void(0);" onclick="cancelReply()">取消回复</a></div>
-		<p class="comment-header"><b>发表评论：</b><a name="respond"></a></p>
 		<form method="post" name="commentform" action="<?php echo BLOG_URL; ?>index.php?action=addcom" id="commentform">
 			<input type="hidden" name="gid" value="<?php echo $logid; ?>" />
 			<?php if(ROLE == 'visitor'): ?>
-			<p>
-				<input type="text" name="comname" maxlength="49" value="<?php echo $ckname; ?>" size="22" tabindex="1">
-				<label for="author"><small>昵称</small></label>
-			</p>
-			<p>
-				<input type="text" name="commail"  maxlength="128"  value="<?php echo $ckmail; ?>" size="22" tabindex="2">
-				<label for="email"><small>邮件地址 (选填)</small></label>
-			</p>
-			<p>
-				<input type="text" name="comurl" maxlength="128"  value="<?php echo $ckurl; ?>" size="22" tabindex="3">
-				<label for="url"><small>个人主页 (选填)</small></label>
-			</p>
+				<p for="author"><small>昵称</small></p>
+				<p><input type="text" name="comname" maxlength="49" value="<?php echo $ckname; ?>" size="22" tabindex="1"></p>
+				<p for="email"><small>邮件地址 (选填)</small></p>
+				<p><input type="text" name="commail"  maxlength="128"  value="<?php echo $ckmail; ?>" size="22" tabindex="2"></p>
+				<p for="url"><small>个人主页 (选填)</small></p>
+				<p><input type="text" name="comurl" maxlength="128"  value="<?php echo $ckurl; ?>" size="22" tabindex="3"></p>
 			<?php endif; ?>
-			<p><textarea name="comment" id="comment" rows="10" tabindex="4"></textarea></p>
+			<p><textarea name="comment" id="comment" rows="10" cols="50" tabindex="4"></textarea></p>
 			<p><?php echo $verifyCode; ?> <input type="submit" id="comment_submit" value="发表评论" tabindex="6" /></p>
 			<input type="hidden" name="pid" id="comment-pid" value="0" size="22" tabindex="1"/>
 		</form>

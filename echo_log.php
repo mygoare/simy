@@ -32,6 +32,8 @@ var jiathis_config={
 </script>
 <script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
 <!-- JiaThis Button END -->
+<div class="clear"></div>
+	<?php blog_comments_post($logid,$ckname,$ckmail,$ckurl,$verifyCode,$allow_remark); ?>
 			</div>
 		</div>
 		<div class="clear"></div>
