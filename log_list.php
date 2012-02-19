@@ -18,7 +18,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 				<ul>
 <li>
 <p>My Tags:</p>
-<p>Mac , Vim , Github</p>
+<p>Mac , Vim , Github , Geek</p>
 </li>
 <?php 
 $widgets = !empty($options_cache['widgets1']) ? unserialize($options_cache['widgets1']) : array();
